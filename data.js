@@ -15,7 +15,7 @@ window.PORTFOLIO_PROJECTS = [
     {
         id: 'projet-01',
         titre: 'Zerator_Live_Avengers_2016',
-        categorie: 'voix | musique | bruits',
+        categorie: 'Voix | Musique | Bruits',
         description: '',
 
         // Exemple : 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
@@ -56,7 +56,7 @@ window.PORTFOLIO_PROJECTS = [
     {
         id: 'projet-02',
         titre: 'Amixem_100_Couches_Beton',
-        categorie: 'voix | musique | bruits',
+        categorie: 'Voix | Musique | Bruits',
         description: '',
 
         // Exemple : 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
@@ -97,7 +97,7 @@ window.PORTFOLIO_PROJECTS = [
     {
         id: 'projet-03',
         titre: 'Lethal_Company',
-        categorie: 'Chevauchement de voix | musique | bruits',
+        categorie: 'Chevauchements voix | Musique | Bruits',
         description: '',
 
         // Exemple : 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
