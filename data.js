@@ -28,7 +28,7 @@ window.PORTFOLIO_PROJECTS = [
   
         // Son d'origine. Il sera mis en Solo automatiquement à l'ouverture de la page.
         pisteBrute: {
-            nom: 'Son brut',
+            nom: 'Brut',
             fichier: 'media/projet-01/Zevent_2016_clip_100k€_AUDIO.m4a',
             couleur: '#f56767ff'
         },
