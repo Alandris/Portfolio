@@ -1,9 +1,15 @@
+// FICHIER PRINCIPAL POUR AJOUTER OU MODIFIER TES PROJETS.
+// 1. Duplique un bloc entre { et } dans la liste ci-dessous.
+// 2. Donne-lui un identifiant unique (id), un titre et une description.
+// 3. Place les fichiers audio/video dans le dossier media correspondant.
+// 4. Attention aux virgules entre les projets.
+//
 // Modifie ce fichier pour présenter tes projets.
 // Les chemins sont relatifs à la racine du site.
 window.PORTFOLIO_PROJECTS = [
   {
     id: 'projet-01',
-    titre: 'Projet 01 — lalala',
+    titre: 'Projet 01 — Scène de fiction',
     categorie: 'Sound design · Dialogue · Mixage',
     description: 'Un exemple de décomposition sonore : isole les voix, la musique et les effets pour comprendre le travail effectué.',
     video: 'media/projet-01/video.mp4',
