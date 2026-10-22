@@ -382,9 +382,10 @@ footer {
 }
 
 .video-wrap {
-    position:relative;
-    background:#050607;
-    aspect-ratio:16/9
+    position: relative;
+    background: #050607;
+    aspect-ratio: auto;
+    height: 260px;
 }
 
 .video-wrap video {
