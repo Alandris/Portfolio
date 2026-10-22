@@ -213,6 +213,11 @@ function createPlayer(projet) {
 
         mute.addEventListener('click', () => {
             track.isMute = !track.isMute;
+
+            if (track.isMute) {
+                track.isSolo = false;
+            }
+
             updateMix();
         });
         solo.addEventListener('click', () => {
