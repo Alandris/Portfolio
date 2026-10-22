@@ -1,80 +1,60 @@
 <!doctype html>
 <html lang="fr">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <title>
-   Décomposition sonore — Portfolio sonore
-  </title>
-  <link href="style.css" rel="stylesheet"/>
- </head>
- <body>
-  <header class="site-header">
-   <a class="brand" href="index.html">
-    <span class="brand-mark">
-     ◉
-    </span>
-    PORTFOLIO SONORE
-   </a>
-   <nav aria-label="Navigation principale" class="top-nav">
-    <a href="index.html">
-     Accueil
-    </a>
-    <a href="cv.html">
-     CV
-    </a>
-    <a class="active" href="decomposition.html">
-     Décomposition sonore
-    </a>
-    <a href="autres.html">
-     Autres projets
-    </a>
-   </nav>
-  </header>
-  <div class="projects-shell">
-   <aside aria-label="Sommaire des projets" class="sidebar">
-    <p class="eyebrow">
-     NAVIGATION
-    </p>
-    <h2>
-     Les projets
-    </h2>
-    <nav class="project-nav" id="project-nav">
-    </nav>
-   </aside>
-   <main class="projects-main">
-    <header class="projects-intro">
-     <p class="eyebrow">
-      02 / DÉCOMPOSITION SONORE
-     </p>
-     <h1>
-      À l’intérieur
-      <em>
-       du son.
-      </em>
-     </h1>
-     <p class="lead">
-      Regarde chaque vidéo et découvre son montage audio. Active ou coupe les pistes. Utilise
-      <strong>
-       M
-      </strong>
-      pour rendre une piste muette, et
-      <strong>
-       S
-      </strong>
-      pour l'écouter en solo.
-     </p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Décomposition sonore — Portfolio sonore</title>
+
+    <!-- Le design actuel est conservé. -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Nouveau : styles du lien vers la vidéo et des groupes de pistes. -->
+    <link rel="stylesheet" href="player-extras.css?v=6">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">◉</span>
+            PORTFOLIO SONORE
+        </a>
+        <nav aria-label="Navigation principale" class="top-nav">
+            <a href="index.html">Accueil</a>
+            <a href="cv.html">CV</a>
+            <a class="active" href="decomposition.html">Décomposition sonore</a>
+            <a href="autres.html">Autres projets</a>
+        </nav>
     </header>
-    <div id="projects">
+
+    <div class="projects-shell">
+        <aside class="sidebar" aria-label="Sommaire des projets">
+            <p class="eyebrow">NAVIGATION</p>
+            <h2>Les projets</h2>
+            <nav class="project-nav" id="project-nav"></nav>
+        </aside>
+
+        <main class="projects-main">
+            <header class="projects-intro">
+                <p class="eyebrow">02 / DÉCOMPOSITION SONORE</p>
+                <h1>À l’intérieur <em>du son.</em></h1>
+                <p class="lead">
+                    Écoute d'abord le son original, puis découvre les pistes
+                    isolées et nettoyées. Utilise <strong>M</strong> pour couper
+                    une piste et <strong>S</strong> pour l'écouter en solo.
+                    Une seule piste peut être en Solo à la fois.
+                    Le bouton <strong>Réinitialiser</strong> réactive le Solo sur le son brut
+                    et enlève tous les Mute.
+                </p>
+            </header>
+
+            <!-- Les projets sont générés par player.js à partir de data.js. -->
+            <div id="projects"></div>
+        </main>
     </div>
-   </main>
-  </div>
-  <footer>
-   Portfolio sonore
-  </footer>
-  <script src="data.js?v=3">
-  </script>
-  <script src="player.js?v=3">
-  </script>
- </body>
+
+    <footer>Portfolio sonore</footer>
+
+    <!-- ?v=6 évite de conserver l'ancienne version dans le cache du navigateur. -->
+    <script src="data.js?v=5"></script>
+    <script src="player.js?v=6"></script>
+</body>
 </html>

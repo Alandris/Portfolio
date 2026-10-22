@@ -1,33 +1,55 @@
-// FICHIER PRINCIPAL POUR AJOUTER OU MODIFIER TES PROJETS.
-// 1. Duplique un bloc entre { et } dans la liste ci-dessous.
-// 2. Donne-lui un identifiant unique (id), un titre et une description.
-// 3. Place les fichiers audio/video dans le dossier media correspondant.
-// 4. Attention aux virgules entre les projets.
-//
-// Modifie ce fichier pour présenter tes projets.
-// Les chemins sont relatifs à la racine du site.
+/*
+ * AJOUTER OU MODIFIER LES PROJETS
+ *
+ * sourceUrl : adresse de la vidéo complète d'origine (facultative).
+ *             Pour cacher le lien, laisse une chaîne vide : ''.
+ * pisteBrute : son tel qu'il était dans la vidéo de base (Solo au départ).
+ * pistes     : sons isolés/nettoyés (pas de Mute au départ).
+ *
+ * IMPORTANT : le fichier son-brut.mp3 est un fichier à ajouter si absent.
+ * Tes fichiers Voix_1.mp3 et Voix_2.mp3 restent inchangés.
+ * Respecte strictement majuscules/minuscules dans les chemins.
+ */
+
 window.PORTFOLIO_PROJECTS = [
-  {
-    id: 'projet-01',
-    titre: 'Live_Zera_Avengers_2016',
-    categorie: 'Sound design · Dialogue · Mixage',
-    description: 'Un exemple de décomposition sonore : isole les voix, la musique et les effets pour comprendre le travail effectué.',
-    video: 'media/projet-01/zera.mp4',
-    pistes: [
-      { nom: 'Voix_1', fichier: 'media/projet-01/Voix_1.mp3', couleur: '#60a5fa' },
-      { nom: 'Voix_2', fichier: 'media/projet-01/Voix_2.mp3', couleur: '#c084fc' }
-    ]
-  },
-  {
-    id: 'projet-02',
-    titre: 'Projet 02 — Ambiance sonore',
-    categorie: 'Création sonore · Ambiances',
-    description: 'Un deuxième emplacement prêt à accueillir une autre vidéo et ses trois pistes synchronisées.',
-    video: 'media/projet-02/video.mp4',
-    pistes: [
-      { nom: 'Voix', fichier: 'media/projet-02/voix.mp3', couleur: '#60a5fa' },
-      { nom: 'Musique', fichier: 'media/projet-02/musique.mp3', couleur: '#c084fc' },
-      { nom: 'Effets', fichier: 'media/projet-02/effets.mp3', couleur: '#34d399' }
-    ]
-  }
+    {
+        id: 'projet-01',
+        titre: 'Live_Zera_Avengers_2016',
+        categorie: 'Sound design · Dialogue · Mixage',
+        description: 'Écoute le son d’origine, puis explore les différentes pistes nettoyées.',
+
+        // Exemple : 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
+        // Si le champ est vide, aucun lien n'est affiché.
+        sourceUrl: '',
+
+        // La vidéo locale de l'extrait, qui reste affichée dans le lecteur.
+        video: 'media/projet-01/zera.mp4',
+
+        // NOUVEAU : exporte le son de la vidéo d'origine dans ce fichier.
+        // Il sera mis en Solo automatiquement à l'ouverture de la page.
+        pisteBrute: {
+            nom: 'Son brut',
+            fichier: 'media/projet-01/son-brut.mp3',
+            couleur: '#f5ba67'
+        },
+
+        // Tes pistes découpées EXISTANTES, sans Mute au départ.
+        // Elles sont silencieuses tant que le son brut est en Solo.
+        pistes: [
+            {
+                nom: 'Voix_1',
+                fichier: 'media/projet-01/Voix_1.mp3',
+                couleur: '#60a5fa'
+            },
+            {
+                nom: 'Voix_2',
+                fichier: 'media/projet-01/Voix_2.mp3',
+                couleur: '#c084fc'
+            }
+        ]
+    }
+
+    // Pour ajouter un projet plus tard, copie le bloc ci-dessus,
+    // ajoute une virgule entre les projets et change son id et ses fichiers.
+    // L'ancien projet 02 fictif n'est pas affiché : ses médias étaient absents.
 ];
