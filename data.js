@@ -14,8 +14,8 @@ window.PORTFOLIO_PROJECTS = [
     description: 'Un exemple de décomposition sonore : isole les voix, la musique et les effets pour comprendre le travail effectué.',
     video: 'media/projet-01/zera.mp4',
     pistes: [
-      { nom: 'Voix_1', fichier: 'media/projet-01/voix_1.mp3', couleur: '#60a5fa' },
-      { nom: 'Voix_2', fichier: 'media/projet-01/voix_2.mp3', couleur: '#c084fc' }
+      { nom: 'Voix_1', fichier: 'media/projet-01/Voix_1.mp3', couleur: '#60a5fa' },
+      { nom: 'Voix_2', fichier: 'media/projet-01/Voix_2.mp3', couleur: '#c084fc' }
     ]
   },
   {
