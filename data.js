@@ -15,35 +15,40 @@ window.PORTFOLIO_PROJECTS = [
     {
         id: 'projet-01',
         titre: 'Live_Zera_Avengers_2016',
-        categorie: 'Sound design · Dialogue · Mixage',
-        description: 'Écoute le son d’origine, puis explore les différentes pistes nettoyées.',
+        categorie: '',
+        description: '',
 
         // Exemple : 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
         // Si le champ est vide, aucun lien n'est affiché.
         sourceUrl: '',
 
         // La vidéo locale de l'extrait, qui reste affichée dans le lecteur.
-        video: 'media/projet-01/zera.mp4',
+        video: 'media/projet-01/Zevent_2016_clip_100k€_VIDEO.mp4',
 
-        // NOUVEAU : exporte le son de la vidéo d'origine dans ce fichier.
-        // Il sera mis en Solo automatiquement à l'ouverture de la page.
+  
+        // Son d'origine. Il sera mis en Solo automatiquement à l'ouverture de la page.
         pisteBrute: {
             nom: 'Son brut',
-            fichier: 'media/projet-01/son-brut.mp3',
-            couleur: '#f5ba67'
+            fichier: 'media/projet-01/Zevent_2016_clip_100k€_AUDIO.m4a',
+            couleur: '#f56767ff'
         },
 
         // Tes pistes découpées EXISTANTES, sans Mute au départ.
         // Elles sont silencieuses tant que le son brut est en Solo.
         pistes: [
             {
-                nom: 'Voix_1',
-                fichier: 'media/projet-01/Voix_1.mp3',
+                nom: 'Voix',
+                fichier: 'media/projet-01/Zevent_2016_clip_100k€_AUDIO_zera_clean2.m4a',
                 couleur: '#60a5fa'
             },
             {
-                nom: 'Voix_2',
-                fichier: 'media/projet-01/Voix_2.mp3',
+                nom: 'Musique',
+                fichier: 'media/projet-01/Zevent_2016_clip_100k€_AUDIO_music_clean.m4a',
+                couleur: '#c084fc'
+            },
+            {
+                nom: 'Autre',
+                fichier: 'media/projet-01/Zevent_2016_clip_100k€_AUDIO_sfx_clean2.m4a',
                 couleur: '#c084fc'
             }
         ]
@@ -51,5 +56,4 @@ window.PORTFOLIO_PROJECTS = [
 
     // Pour ajouter un projet plus tard, copie le bloc ci-dessus,
     // ajoute une virgule entre les projets et change son id et ses fichiers.
-    // L'ancien projet 02 fictif n'est pas affiché : ses médias étaient absents.
 ];

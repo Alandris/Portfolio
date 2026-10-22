@@ -124,3 +124,8 @@
 .player-message[hidden] {
     display: none !important;
 }
+
+/* Le lien vidéo reste aligné à gauche si aucune catégorie n'est renseignée. */
+.project-source-alone {
+    margin-left: 0;
+}

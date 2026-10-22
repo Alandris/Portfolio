@@ -74,19 +74,34 @@ function adresseSource(valeur) {
     }
 }
 
-function createPlayer(projet, numero) {
+function createPlayer(projet) {
     const section = e('section', 'project');
     section.id = projet.id;
 
-    section.append(e('div', 'project-index', `PROJET ${String(numero + 1).padStart(2, '0')}`));
+    // Affiche uniquement le titre : plus de numérotation « PROJET 01 ».
     section.append(e('h2', '', projet.titre));
-    section.append(e('p', 'project-description', projet.description));
-    section.append(e('span', 'project-tag', projet.categorie || 'Audio / Vidéo'));
 
-    // Le lien vers la vidéo complète est facultatif et indépendant de l'extrait local.
+    // Comme sourceUrl, description et categorie sont facultatives.
+    // Une chaîne vide ou composée d'espaces ne crée aucun élément HTML.
+    const description = typeof projet.description === 'string'
+        ? projet.description.trim()
+        : '';
+    if (description) {
+        section.append(e('p', 'project-description', description));
+    }
+
+    const categorie = typeof projet.categorie === 'string'
+        ? projet.categorie.trim()
+        : '';
+    if (categorie) {
+        section.append(e('span', 'project-tag', categorie));
+    }
+
+    // Le lien vers la vidéo complète reste facultatif.
     const lienOriginal = adresseSource(projet.sourceUrl);
     if (lienOriginal) {
-        const lien = e('a', 'project-source', '↗ Voir la vidéo d’origine');
+        const classeLien = categorie ? 'project-source' : 'project-source project-source-alone';
+        const lien = e('a', classeLien, '↗ Voir la vidéo d’origine');
         lien.href = lienOriginal;
         lien.target = '_blank';
         lien.rel = 'noopener noreferrer';
@@ -417,11 +432,11 @@ function createPlayer(projet, numero) {
 }
 
 if (nav && conteneur) {
-    projets.forEach((p, i) => {
+    projets.forEach((p) => {
         const lien = e('a', '', p.titre);
         lien.href = '#' + p.id;
         nav.append(lien);
-        conteneur.append(createPlayer(p, i));
+        conteneur.append(createPlayer(p));
     });
 
     const anchors = [...nav.querySelectorAll('a')];
