@@ -9,14 +9,13 @@
 window.PORTFOLIO_PROJECTS = [
   {
     id: 'projet-01',
-    titre: 'Projet 01 — Scène de fiction',
+    titre: 'Live_Zera_Avengers_2016',
     categorie: 'Sound design · Dialogue · Mixage',
     description: 'Un exemple de décomposition sonore : isole les voix, la musique et les effets pour comprendre le travail effectué.',
-    video: 'media/projet-01/video.mp4',
+    video: 'media/projet-01/zera.mp4',
     pistes: [
-      { nom: 'Voix', fichier: 'media/projet-01/voix.mp3', couleur: '#60a5fa' },
-      { nom: 'Musique', fichier: 'media/projet-01/musique.mp3', couleur: '#c084fc' },
-      { nom: 'Effets', fichier: 'media/projet-01/effets.mp3', couleur: '#34d399' }
+      { nom: 'Voix_1', fichier: 'media/projet-01/voix_1.mp3', couleur: '#60a5fa' },
+      { nom: 'Voix_2', fichier: 'media/projet-01/voix_2.mp3', couleur: '#c084fc' }
     ]
   },
   {
